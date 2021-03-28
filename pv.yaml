@@ -1,7 +1,22 @@
 kind: PersistentVolume
 apiVersion: v1
 metadata:
-  name: local-volume
+  name: local-volume-1
+  labels:
+    type: local
+spec:
+  storageClassName: default
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/home/ubuntu"
+---
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: local-volume-2
   labels:
     type: local
 spec:

@@ -19,6 +19,9 @@ spec:
         server:
           persistentVolume:
             storageClass: default
+        alertmanager:
+          persistentVolume:
+            storageClass: default
     repoURL: https://prometheus-community.github.io/helm-charts
     targetRevision: 13.0.2
   syncPolicy:
