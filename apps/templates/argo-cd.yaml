@@ -12,7 +12,7 @@ spec:
   project: default
   source:
     path: charts/argo-cd
-    repoURL: git@github.com:perushko/argocd.git
+    repoURL: https://github.com/perushko/argocd.git
     targetRevision: HEAD
   syncPolicy:
     automated:
