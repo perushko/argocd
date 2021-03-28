@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: prometheus
+  name: grafana
   namespace: default
   finalizers:
   - resources-finalizer.argocd.argoproj.io
@@ -11,16 +11,12 @@ spec:
     namespace: default
   project: default
   source:
-    chart: prometheus
+    chart: grafana
     helm:
       values: |
         pushgateway:
           enabled: false
-        server:
-          persistentVolume:
-            storageClass: dafault
-    repoURL: https://prometheus-community.github.io/helm-charts
-    targetRevision: 13.0.2
+    repoURL: https://grafana.github.io/helm-charts
   syncPolicy:
     automated:
       prune: true
