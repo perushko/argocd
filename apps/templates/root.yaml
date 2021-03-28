@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: root
+  name: CI/CD
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
@@ -11,7 +11,7 @@ spec:
   project: default
   source:
     path: apps/
-    repoURL: https://github.com/arthurk/argocd-example-install.git
+    repoURL: git@github.com:perushko/argocd.git
     targetRevision: HEAD
   syncPolicy:
     automated:
