@@ -17,6 +17,7 @@ spec:
         pushgateway:
           enabled: false
     repoURL: https://grafana.github.io/helm-charts
+    targetRevision: HEAD
   syncPolicy:
     automated:
       prune: true
